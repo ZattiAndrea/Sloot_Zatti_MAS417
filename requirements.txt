@@ -8,7 +8,6 @@ charset-normalizer==3.4.0
 chess==1.11.1
 chess.com==3.7.0
 cloudscraper==1.2.71
-customtkinter==5.2.2
 darkdetect==0.8.0
 Deprecated==1.2.15
 frozenlist==1.5.0
@@ -21,6 +20,9 @@ packaging==24.2
 pillow==11.0.0
 propcache==0.2.0
 pyparsing==3.2.0
+PyQt6==6.7.1
+PyQt6-Qt6==6.7.3
+PyQt6_sip==13.8.0
 python-dateutil==2.9.0.post0
 python-utils==3.9.0
 qrcode==8.0
