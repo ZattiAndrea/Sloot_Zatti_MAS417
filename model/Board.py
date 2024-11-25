@@ -7,6 +7,17 @@ min_y, max_y = -1.0, 15.0
 min_z, max_z = -1.0, 1.0
 
 def get_square_center(column, row):
+    """
+        Calculates the center coordinates of a specific square on the chessboard.
+        Args:
+            column (int): The column index of the square.
+            row (int): The row index of the square.
+        Returns:
+            tuple: A tuple (center_x, center_y, center_z) representing the 3D coordinates of the square's center.
+        Notes:
+            - Accounts for a height difference between light and dark squares.
+            - Uses the predefined minimum and maximum coordinates of the chessboard.
+    """
     board_width_x = max_x - min_x
     board_height_y = max_y - min_y
     square_width_x = board_width_x / 8
@@ -19,6 +30,21 @@ def get_square_center(column, row):
     return center_x, center_y, center_z
 
 def place_piece_on_board(board_mesh, piece_stl_file, column, row):
+    """
+        Positions a 3D chess piece on a specific square of the chessboard.
+        Args:
+            board_mesh (mesh.Mesh): The STL mesh of the chessboard.
+            piece_stl_file (str): Path to the STL file of the chess piece.
+            column (int): The column index of the square.
+            row (int): The row index of the square.
+        Returns:
+            mesh.Mesh: The combined STL mesh of the chessboard and the placed piece.
+        Workflow:
+            - Loads the STL file for the chess piece.
+            - Calculates the target square's center coordinates.
+            - Determines the piece's bounding box and centers it on the target square.
+            - Combines the chessboard and piece meshes.
+    """
     piece_mesh = mesh.Mesh.from_file(piece_stl_file)
     center_x, center_y, center_z = get_square_center(column, row)
 
@@ -37,6 +63,19 @@ def place_piece_on_board(board_mesh, piece_stl_file, column, row):
     return combined_mesh
 
 def position_realizer(board_stl_file, fen):
+    """
+        Places chess pieces on a chessboard based on a FEN string and saves the resulting STL model.
+        Args:
+            board_stl_file (str): Path to the STL file of the chessboard.
+            fen (str): FEN string describing the initial setup of the chessboard.
+        Returns:
+            None: Saves the combined STL model as 'chessMoment.stl'.
+        Workflow:
+            - Loads the chessboard STL file.
+            - Parses the FEN string to determine piece positions.
+            - Uses `place_piece_on_board` to position each piece on the chessboard.
+            - Saves the final combined STL model.
+    """
     board_mesh = mesh.Mesh.from_file(board_stl_file)
     piece_files = {
         'p': 'Models/TridimensionalModels/pieces/black_pawn.stl',

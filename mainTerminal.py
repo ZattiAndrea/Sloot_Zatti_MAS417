@@ -6,6 +6,9 @@ from datetime import datetime
 import re
 
 class ChessAPI(ABC):
+    """
+        Abstract base class that defines the interface for chess API interactions.
+    """
     @abstractmethod
     def get_games(self, player1, player2):
         pass
@@ -57,6 +60,26 @@ class ChessAPIFactory:
 
 
 def main():
+    """
+        Main function that drives the program workflow:
+            1. Prompts the user to choose a chess API (Lichess or Chess.com).
+            2. Fetches games between two players.
+            3. Analyzes a specific game chosen by the user.
+            4. Computes the board position after a user-specified number of moves.
+            5. Generates a QR code and 3D chessboard model based on the game's details.
+
+        To try:
+            -Select lichess.
+            -Player 1: themoonsman.
+            -Player 2: Rofy2.
+            -Choose a random game and a random position.
+
+            -Select chess.com
+            -Player 1: them00nsman.
+            -Player 2: Scarophy.
+            (Wait a little bit more, the public API is slow)
+            -Choose a random game and a random position.
+    """
     print("Choose the Chess API:")
     print("1. Lichess")
     print("2. Chess.com")

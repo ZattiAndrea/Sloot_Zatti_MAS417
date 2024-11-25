@@ -3,6 +3,14 @@ import numpy as np
 from stl import mesh
 
 def qr_code_matrix(link, version=1):
+    """
+        Generates a binary matrix for a QR code based on the provided link.
+        Args:
+            link (str): The URL or text to encode in the QR code.
+            version (int, optional): The version of the QR code, controlling its size. Defaults to 1.
+        Returns:
+            np.ndarray: A NumPy array representing the QR code matrix (1 for black modules, 0 for white).
+    """
     qr = qrcode.QRCode(
         version=version,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -16,6 +24,16 @@ def qr_code_matrix(link, version=1):
     return np.array(matrix, dtype=np.uint8)
 
 def matrix_to_stl(matrix, dimension_cm=10, height_mm=5, output_file="qrcode_3d.stl"):
+    """
+        Converts a binary QR code matrix into a 3D STL model for 3D printing.
+        Args:
+            matrix (np.ndarray): The binary QR code matrix (1 for black, 0 for white).
+            dimension_cm (float, optional): The total size of the QR code in centimeters, defaults to 10.
+            height_mm (float, optional): The height of the raised blocks in millimeters, defaults to 5.
+            output_file (str, optional): The name of the output STL file, efaults to "qrcode_3d.stl".
+        Returns:
+            None: Saves the generated STL model to the specified file.
+    """
     rows, cols = matrix.shape
     dimension_mm = dimension_cm * 10
     block_size = dimension_mm / max(rows, cols)
@@ -71,6 +89,15 @@ def matrix_to_stl(matrix, dimension_cm=10, height_mm=5, output_file="qrcode_3d.s
 
 
 def position_qrcode(board_file, qrcode_file, output_file):
+    """
+        Positions a 3D QR code model on a predefined board model and combines them into a single STL file.
+        Args:
+            board_file (str): Path to the STL file of the board.
+            qrcode_file (str): Path to the STL file of the 3D QR code.
+            output_file (str): Path to save the combined STL model.
+        Returns:
+            None: Saves the combined STL model to the specified file.
+    """
     board = mesh.Mesh.from_file(board_file)
     qrcode = mesh.Mesh.from_file(qrcode_file)
 
