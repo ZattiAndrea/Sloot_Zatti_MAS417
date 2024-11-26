@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38fb7cc6-d81d-442b-812c-c7a287790121" name="Changes" comment="All the most important functions documentations for the main project have been added, maybe in future also the rest, related to the GUI, could be added.">
+    <list default="true" id="38fb7cc6-d81d-442b-812c-c7a287790121" name="Changes" comment="A little change for the printing function of the games list has been implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainTerminal.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainTerminal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TridimensionalModels/boards/chessMoment.stl" beforeDir="false" afterPath="$PROJECT_DIR$/models/TridimensionalModels/boards/chessMoment.stl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TridimensionalModels/final-product/final_model.stl" beforeDir="false" afterPath="$PROJECT_DIR$/models/TridimensionalModels/final-product/final_model.stl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +269,7 @@
       <workItem from="1732565540900" duration="1727000" />
       <workItem from="1732614436783" duration="116000" />
       <workItem from="1732615105659" duration="49000" />
-      <workItem from="1732615191177" duration="2668000" />
+      <workItem from="1732615191177" duration="4602000" />
     </task>
     <task id="LOCAL-00001" summary="Reupload of the entire environment to fix a problem caused by a mistake into venv setup, made by me">
       <option name="closed" value="true" />
@@ -306,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732567173713</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="A little change for the printing function of the games list has been implemented">
+      <option name="closed" value="true" />
+      <created>1732631299628</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732631299628</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +337,8 @@
     <MESSAGE value="." />
     <MESSAGE value="Reupload of the all project due to virtual env problems" />
     <MESSAGE value="All the most important functions documentations for the main project have been added, maybe in future also the rest, related to the GUI, could be added." />
-    <option name="LAST_COMMIT_MESSAGE" value="All the most important functions documentations for the main project have been added, maybe in future also the rest, related to the GUI, could be added." />
+    <MESSAGE value="A little change for the printing function of the games list has been implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="A little change for the printing function of the games list has been implemented" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Programming_Project$Main.coverage" NAME="Main Coverage Results" MODIFIED="1732204649889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
