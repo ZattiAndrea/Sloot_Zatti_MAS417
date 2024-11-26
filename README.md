@@ -31,7 +31,8 @@ This project leverages APIs from the two largest chess platforms, [Chess.com](ht
    git clone https://github.com/ZattiAndrea/Sloot_Zatti_MAS417.git
    cd Sloot_Zatti_MAS417
    '''
-   
+
+2. Install requirements:
    '''bash
    pip install -r requirements.txt
    '''
