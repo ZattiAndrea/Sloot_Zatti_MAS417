@@ -112,6 +112,27 @@ def main():
 
             if games_list:
                 print(f"Found {len(games_list)} games between {player1} and {player2}.")
+
+                for game in games_list:
+                    if choice == "1":  # Lichess
+                        game_id = game['id']
+                        moves = api.get_game_details(game_id)
+                        link = f"https://lichess.org/{game_id}"
+                        welo = game["players"]["white"]["rating"]
+                        belo = game["players"]["black"]["rating"]
+                        date = game["createdAt"]
+                        date = date.strftime("%Y-%m-%d")
+                        white = game["players"]["white"]["user"]["name"]
+                        black = game["players"]["black"]["user"]["name"]
+                        print(f"Game {games_list.index(game)}° played on {date} between: {white} - {black} vs {player2} - {welo} vs {belo}")
+
+                    elif choice == "2":  # Chess.com
+                        moves = game["pgn"]
+                        link = game["url"]
+                        white = game["white"]["username"]
+                        black = game["black"]["username"]
+                        date_match = re.search(r'\[Date "(\d{4}\.\d{2}\.\d{2})"\]', moves)
+                        print(f"Game {games_list.index(game)}° played on {date_match.group(1)} between: {white} vs {black}")
             else:
                 print(f"No games found between {player1} and {player2}. Please try again.")
         except Exception as e:
