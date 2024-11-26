@@ -55,8 +55,8 @@ The project delivers a fully functional solution with the following highlights:
   ![3D Chessboard Preview](Img/ChessBoard1.png)
 
 - **3D Printed Chessboard**:
-  ![3D Printed Chessboard 1](Img/ChessBoard3A.jpeg)
-  ![3D Printed Chessboard 2](Img/ChessBoard3b.jpeg)
+  ![3D Printed Chessboard 1](Img/Chessboard3A.jpeg)
+  ![3D Printed Chessboard 2](Img/Chessboard3b.jpeg)
 
 - **3D Chessboard Preview**:
   ![3D Printed QR-Code](Img/QRCode.jpeg)
