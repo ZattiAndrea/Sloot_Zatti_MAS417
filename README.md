@@ -20,7 +20,7 @@ This project leverages APIs from the two largest chess platforms, [Chess.com](ht
 ## Technology Stack
 
 - **Python**: Core programming language.
-- **NumPy**: For handling Forsyth-Edwards Notation (FEN) structures.
+- **NumPy-stl**: To handle 3D printable models.
 - **PyQt6**: To build the graphical user interface.
 - **APIs**: Data fetched from [Chess.com](https://www.chess.com/news/view/published-data-api) and [Lichess](https://lichess.org/api).
 
